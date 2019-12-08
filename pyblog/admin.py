@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.contrib import admin
-from pyblog.models import Post,PostCategory
+from pyblog.models import Post,PostCategory,Comment
 
 
 
@@ -11,4 +11,8 @@ class PostCategoryAdmin(admin.ModelAdmin):
     pass
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
     pass
