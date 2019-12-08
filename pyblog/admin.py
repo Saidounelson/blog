@@ -2,5 +2,13 @@
 from __future__ import unicode_literals
 
 from django.contrib import admin
+from pyblog.models import Post,PostCategory
 
-# Register your models here.
+
+
+@admin.register(PostCategory)
+class PostCategoryAdmin(admin.ModelAdmin):
+    pass
+@admin.register(Post)
+class PostAdmin(admin.ModelAdmin):
+    pass
