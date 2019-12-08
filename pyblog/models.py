@@ -27,9 +27,9 @@ class Comment(models.Model):
     STATUS_MODERATED = 'MODERATED'
     
     STATUS_CHOICES = (
-        (STATUS_VISIBLE,'VISIBLE')
-        (STATUS_HIDDEN,'HIDDEN')
-        (STATUS_MODERATED,'MODERATED')
+        (STATUS_VISIBLE, 'Visible'),
+        (STATUS_HIDDEN, 'Hiddeen'),
+        (STATUS_MODERATED, 'Moderated'),
     )
     
     post = models.ForeignKey('Post',on_delete=models.CASCADE)
