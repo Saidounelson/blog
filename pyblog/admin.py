@@ -8,10 +8,22 @@ from pyblog.models import Post,PostCategory,Comment
 
 @admin.register(PostCategory)
 class PostCategoryAdmin(admin.ModelAdmin):
-    pass
+    search_fields = ['name']
+    
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    pass
+    list_display = (
+        'title',
+        'category',
+        'text',
+        'published',
+        'created_at',
+    )
+    list_filter = ('category__name',
+                   'published')
+    
+    autocomplete_fields=['category']
+    
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
