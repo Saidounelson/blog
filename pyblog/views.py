@@ -6,11 +6,12 @@ from pyblog.models import Post
 # Create your views here.
 
 def post_list(request):
+    print("test")
     posts = Post.objects.all()
-    
+    print(posts)
     context = {
-        "post": posts
+        'posts': posts,
     }
     
-    return render(request,'pyblog/post_list.html',context)
+    return render(request,'pyblog/post_list.html', context)
     

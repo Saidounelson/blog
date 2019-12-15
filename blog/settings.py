@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bootstrap4',
     'pyblog.apps.PyblogConfig',
 ]
 
@@ -55,7 +56,9 @@ ROOT_URLCONF = 'blog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+            ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -120,7 +123,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILE_DIRS = [
-    os.path.join(BASE_DIR, 'static'), 
-    ] 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static-res"),
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 

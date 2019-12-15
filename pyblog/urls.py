@@ -3,5 +3,5 @@ from django.contrib import admin
 from pyblog import views
 
 urlpatterns = [
-    url(r'^post/',views.post_list,'home'),
+    url(r'^post/',views.post_list,name='home'),
 ]
